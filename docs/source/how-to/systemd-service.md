@@ -131,9 +131,13 @@ specified in the services sets the permission of new log files.
 Enable logging in the service files by editing the `ExecStart` line, appending
 `-l` and `-L` options:
 
+`/etc/systemd/system/deluged.service`
+
 ```
 ExecStart=/usr/bin/deluged -d -l /var/log/deluge/daemon.log -L warning
 ```
+
+`/etc/systemd/system/deluge-web.service`
 
 ```
 ExecStart=/usr/bin/deluge-web -d -l /var/log/deluge/web.log -L warning
